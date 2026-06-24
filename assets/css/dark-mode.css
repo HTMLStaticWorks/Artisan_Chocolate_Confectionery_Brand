@@ -1,0 +1,61 @@
+/* 🌗 Dark Theme Variables */
+
+[data-theme="dark"] {
+    --primary: #F7F3EE;
+    /* Light text in dark mode */
+    --secondary: #17120E;
+    /* Background Dark */
+    --accent: #A86A3D;
+    --accent-gold: #D4A373;
+    --text-muted-light: #A59285;
+    --border-light: #2C221B;
+    --bg-color: #17120E;
+    --text-color: #F7F3EE;
+    --nav-icon-color: #F7F3EE;
+    --toggler-filter: invert(1);
+}
+
+/* Global Fix for hardcoded Tailwind text-primary and bg-secondary across all pages */
+[data-theme="dark"] body,
+[data-theme="dark"] .bg-secondary {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: var(--primary) !important;
+}
+
+[data-theme="dark"] .linen-texture {
+    opacity: 0.05 !important;
+}
+
+[data-theme="dark"] section[class*="bg-secondary"] {
+    background-color: var(--bg-color) !important;
+}
+
+[data-theme="dark"] .bread-card {
+    background-color: #231B16;
+    border-color: #382B23;
+}
+
+
+
+
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+    color: #F7F3EE;
+}
+
+[data-theme="dark"] .btn-secondary {
+    border-color: #F7F3EE;
+    color: #F7F3EE;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: #F7F3EE;
+    color: #17120E;
+}
+

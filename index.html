@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Veloura Chocolates | Premium Single-Origin Artisan Chocolate</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description"
+        content="Discover Veloura Chocolates. Premium single-origin chocolate bars, handcrafted truffles, luxury gifting collections, and curated tasting experiences. Crafted from origin, savored with emotion.">
+
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A2C1D',
+                        secondary: '#FFF9F4',
+                        accent: '#A86A3D',
+                        'accent-gold': '#D4A373',
+                        'dark-bg': '#17120E',
+                        'dark-surface': '#231B16',
+                    },
+                    fontFamily: {
+                        cormorant: ['Cormorant Garamond', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Project Styles -->
+    <!-- SEO & Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Veloura Chocolates",
+      "image": "https://images.unsplash.com/photo-1549007994-cb92caedd5cb?w=1200",
+      "@id": "https://veloura-chocolates.com",
+      "url": "https://veloura-chocolates.com",
+      "telephone": "+33 1 45 48 55 25",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Rue Bonaparte",
+        "addressLocality": "Paris",
+        "postalCode": "75006",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8546,
+        "longitude": 2.3331
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://instagram.com/velourachocolates"
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance { text-wrap: balance; }
+        }
+    </style>
+</head>
+
+<body class="bg-secondary text-primary transition-colors duration-300">
+    <div class="linen-texture fixed inset-0 z-[-1] opacity-10"></div>
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-dark-border h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
+        <div class="container mx-auto flex items-center justify-between w-full">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-accent">
+                    <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
+                    <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                </svg>
+                <span class="font-playfair text-2xl font-bold">Velour</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex items-center gap-6">
+                <a href="index.html" class="nav-link-underline font-medium text-accent">Home</a>
+                <a href="home-2.html" class="nav-link-underline font-medium hover:text-accent transition-colors">Home
+                    2</a>
+                <a href="about.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">About</a>
+                <a href="service.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Service</a>
+                <a href="blog.html" class="nav-link-underline font-medium hover:text-accent transition-colors">Blog</a>
+                <a href="pricing.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Pricing</a>
+                <a href="contact.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Contact</a>
+                </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 md:gap-4">
+                <button id="theme-toggle"
+                    class="hidden xl:flex p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors theme-toggle"
+                    aria-label="Toggle Theme">
+                    <svg id="theme-moon" class="w-6 h-6 hidden dark:block text-accent-gold" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-sun" class="w-6 h-6 block dark:hidden text-accent-gold" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button id="rtl-toggle"
+                    class="hidden xl:flex p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors font-bold text-sm rtl-toggle"
+                    aria-label="Toggle RTL">RTL</button>
+
+                <div class="hidden xl:flex items-center gap-3">
+                    <a href="login.html" class="btn-secondary py-2 px-4 text-sm">Sign In</a>
+                </div>
+
+                <!-- Hamburger -->
+                <button id="hamburger-btn"
+                    class="xl:hidden p-2 flex items-center justify-center w-[40px] h-[40px] relative transition-colors"
+                    aria-label="Menu" aria-expanded="false">
+                    <span class="navbar-toggler-icon pointer-events-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-overlay" class="sidebar-overlay bg-black/60 backdrop-blur-sm"></div>
+    <aside id="sidebar-nav" class="sidebar-nav flex flex-col pt-6 px-6" role="dialog" aria-modal="true"
+        aria-label="Navigation Menu">
+        <div class="flex items-center justify-between mb-8">
+            <span class="font-playfair text-xl font-bold">Menu</span>
+            <div class="flex items-center gap-2">
+                <button
+                    class="p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors theme-toggle"
+                    aria-label="Toggle Theme">
+                    <svg class="w-6 h-6 hidden dark:block text-accent-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg class="w-6 h-6 block dark:hidden text-accent-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button
+                    class="p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors font-bold text-xs rtl-toggle"
+                    aria-label="Toggle RTL">RTL</button>
+                <button id="sidebar-close" class="p-2 hover:bg-black/5 rounded-full dark:text-white"
+                    aria-label="Close Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium">
+            <a href="index.html" class="py-3 border-b border-border-light dark:border-dark-border text-accent">Home</a>
+            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-dark-border">Home 2</a>
+            <a href="about.html" class="py-3 border-b border-border-light dark:border-dark-border">About</a>
+            <a href="service.html" class="py-3 border-b border-border-light dark:border-dark-border">Service</a>
+            <a href="blog.html" class="py-3 border-b border-border-light dark:border-dark-border">Blog</a>
+            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-dark-border">Pricing</a>
+            <a href="contact.html" class="py-3 border-b border-border-light dark:border-dark-border">Contact</a>
+            <div class="mt-6 flex flex-col gap-4">
+                <a href="login.html" class="btn-secondary text-center">Sign In</a>
+            </div>
+        </nav>
+        <div class="mt-auto pb-8 flex justify-center gap-6 opacity-60">
+            <!-- Simple Social Placeholders -->
+            <span class="w-6 h-6">FB</span>
+            <span class="w-6 h-6">IG</span>
+            <span class="w-6 h-6">TW</span>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="min-h-[calc(100vh-72px)] flex items-center pt-6 pb-12 md:pt-10 md:pb-20 px-6 md:px-12 overflow-hidden bg-[#FFF9F4] dark:bg-dark-bg relative">
+            <div class="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="animate-heroReveal">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent font-semibold text-sm mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                        </span>
+                        SINGLE-ORIGIN & HANDCRAFTED
+                    </div>
+                    <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+                        <span class="animate-doughRise" style="animation-delay: 0.2s;">
+                            <span>Exceptional</span>
+                        </span>
+                        <span class="animate-doughRise" style="animation-delay: 0.4s;">
+                            <span>Chocolate,</span>
+                        </span>
+                        <br>
+                        <span class="animate-doughRise" style="animation-delay: 0.6s;">
+                            <span class="text-accent italic glow-warmth">Rooted In</span>
+                        </span>
+                        <span class="animate-doughRise" style="animation-delay: 0.8s;">
+                            <span class="text-accent italic glow-warmth">Origin.</span>
+                        </span>
+                    </h1>
+                    <p class="text-lg md:text-xl max-w-lg mb-10 opacity-80 leading-relaxed text-balance">
+                        Discover handcrafted single-origin chocolates, artisan truffles, and luxurious gift collections crafted to celebrate the richness of cocoa and the artistry behind every bite.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="service.html" class="btn-secondary text-lg px-8 py-4">Corporate Gifting</a>
+                    </div>
+                    <!-- Trust Badges -->
+                    <div
+                        class="grid grid-cols-2 gap-y-8 gap-x-6 mt-12 pt-8 border-t border-border-light dark:border-dark-border">
+                        <div class="flex flex-col text-left">
+                            <span class="font-playfair text-xl font-bold">Ethically Sourced</span>
+                            <span class="text-[10px] sm:text-xs opacity-60 uppercase font-bold tracking-widest">Single-Origin Cocoa</span>
+                        </div>
+                        <div class="flex flex-col text-left">
+                            <span class="font-playfair text-xl font-bold">Hand-Tempered</span>
+                            <span class="text-[10px] sm:text-xs opacity-60 uppercase font-bold tracking-widest">Small Batch Truffles</span>
+                        </div>
+                        <div class="flex flex-col text-left">
+                            <span class="font-playfair text-xl font-bold">Luxury Gifting</span>
+                            <span class="text-[10px] sm:text-xs opacity-60 uppercase font-bold tracking-widest">Custom Collections</span>
+                        </div>
+                        <div class="flex flex-col text-left">
+                            <span class="font-playfair text-xl font-bold">Est. 2020</span>
+                            <span class="text-[10px] sm:text-xs opacity-60 uppercase font-bold tracking-widest">Artisan Chocolatier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative flex justify-center xl:justify-end animate-heroReveal"
+                    style="animation-delay: 0.3s;">
+                    <div class="absolute inset-0 bg-accent/10 blur-[100px] rounded-full scale-75 animate-pulse"></div>
+                    <div class="relative z-10 w-full max-w-[500px] animate-breadRise">
+                        <!-- Steam Animation -->
+                        <div class="absolute -top-12 left-1/2 -translate-x-1/2 flex gap-4">
+                            <svg class="animate-steamRise opacity-0" width="12" height="40"
+                                style="animation-delay: 0s;">
+                                <path d="M6 40C6 40 1 35 1 30C1 25 11 15 11 10C11 5 6 0 6 0" stroke="#A86A3D"
+                                    stroke-width="2" fill="none" />
+                            </svg>
+                            <svg class="animate-steamRise opacity-0" width="12" height="40"
+                                style="animation-delay: 1.2s;">
+                                <path d="M6 40C6 40 1 35 1 30C1 25 11 15 11 10C11 5 6 0 6 0" stroke="#A86A3D"
+                                    stroke-width="2" fill="none" />
+                            </svg>
+                            <svg class="animate-steamRise opacity-0" width="12" height="40"
+                                style="animation-delay: 2.4s;">
+                                <path d="M6 40C6 40 1 35 1 30C1 25 11 15 11 10C11 5 6 0 6 0" stroke="#A86A3D"
+                                    stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwy4iBBkhY6UUYpfo0F5B-phIfyYqDidRctVgnz7WmQ&s=10"
+                            alt="Premium Artisan Chocolates"
+                            class="rounded-2xl shadow-2xl w-full h-[500px] object-cover border-8 border-white dark:border-dark-surface">
+                        <!-- Flour Particles -->
+                        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                            <div class="animate-flourDust absolute top-10 left-10 w-1 h-1 bg-white rounded-full"></div>
+                            <div class="animate-flourDust absolute top-40 right-10 w-1 h-1 bg-white rounded-full"
+                                style="animation-delay: 0.5s;"></div>
+                            <div class="animate-flourDust absolute bottom-20 left-20 w-1 h-1 bg-white rounded-full"
+                                style="animation-delay: 1.2s;"></div>
+                            <div class="animate-flourDust absolute top-1/2 left-1/2 w-1 h-1 bg-white rounded-full"
+                                style="animation-delay: 2s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1 — FRESHNESS BAR -->
+        <section class="bg-primary py-8 overflow-hidden relative">
+            <div class="animate-marquee whitespace-nowrap flex items-center gap-12">
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🍫
+                    Single-Origin Cocoa</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🧑‍🍳
+                    Hand-Tempered Batches</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🌟 Pure
+                    Cocoa Butter</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🎁 Luxury
+                    Gifting Boxes</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🌿 100%
+                    Organic Ingredients</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🍷
+                    Curated tasting experiences</span>
+                <!-- Repeat for seamless loop -->
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🍫
+                    Single-Origin Cocoa</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🧑‍🍳
+                    Hand-Tempered Batches</span>
+                <span class="text-secondary/40 text-2xl">•</span>
+                <span class="text-secondary text-2xl font-playfair font-bold flex items-center gap-3 italic">🌟 Pure
+                    Cocoa Butter</span>
+            </div>
+        </section>
+
+        <!-- Section 2 — TODAY'S BAKE -->
+        <section class="py-24 px-6 md:px-12 bg-secondary dark:bg-dark-bg">
+            <div class="container mx-auto">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Featured <span
+                            class="text-accent italic">Chocolate Collections</span></h2>
+                    <p class="max-w-2xl mx-auto opacity-70">Hand-selected origins and curated assortments. Explore our signature collection.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center">
+                    <!-- Cards with rotation -->
+                    <div
+                        class="bread-card relative group md:rotate-[-1.5deg] hover:rotate-0 transition-transform duration-500 scroll-reveal">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfYff3ZjJic828_NwqLE_0QJv6fVr6n0kThxGMn5u6RQ&s=10"
+                            alt="Madagascar Dark Chocolate"
+                            class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="font-playfair text-3xl text-white font-bold mb-2">Madagascar Dark</h3>
+                            <p class="text-white/80 mb-4 text-sm">72% single-origin dark chocolate, featuring bright notes of red fruit and a subtle citrus finish.</p>
+                            </div>
+                    </div>
+
+                    <div class="bread-card relative group rotate-0 transition-transform duration-500 scroll-reveal"
+                        style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=800&q=80"
+                            alt="Signature Truffle Box"
+                            class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="font-playfair text-3xl text-white font-bold mb-2">Signature Truffle Box</h3>
+                            <p class="text-white/80 mb-4 text-sm">A luxury assortment of handcrafted truffles filled with rich ganaches and caramel infusions.</p>
+                            </div>
+                    </div>
+
+                    <div class="bread-card relative group md:rotate-[1.5deg] hover:rotate-0 transition-transform duration-500 scroll-reveal md:col-span-2 lg:col-span-1 md:mx-auto md:max-w-md lg:max-w-none"
+                        style="transition-delay: 0.2s;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIsQht2_8MtHbEx-YOqPlC5fJtutiOH9Wfg9Td9C5yBw&s=10"
+                            alt="Ecuador Reserve Collection"
+                            class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="font-playfair text-3xl text-white font-bold mb-2">Ecuador Reserve</h3>
+                            <p class="text-white/80 mb-4 text-sm">85% dark chocolate sourced from single-estate farms, yielding earthy and floral undertones.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 — HOW ORDERING WORKS -->
+        <section class="py-24 px-6 md:px-12 bg-secondary/50 dark:bg-dark-surface/30 relative">
+            <div class="container mx-auto">
+                <div class="text-center mb-20 scroll-reveal">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">How Ordering Works</h2>
+                    <p class="max-w-2xl mx-auto opacity-70 italic">Sourced in rhythm with nature, delivered in harmony with your schedule.</p>
+                </div>
+
+                <div
+                    class="relative flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-8 max-w-5xl mx-auto">
+                    <!-- Connecting Line -->
+                    <div
+                        class="hidden lg:block absolute top-[40px] left-[15%] w-[70%] h-0.5 animate-line-flow opacity-30 z-0">
+                    </div>
+
+                    <!-- Steps -->
+                    <div class="step-card relative z-10 flex flex-col items-center text-center scroll-reveal group">
+                        <div
+                            class="step-number w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-playfair text-2xl font-bold mb-8 shadow-xl shadow-accent/20">
+                            1</div>
+                        <div class="relative mb-6">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbdNa6rxsOH9aivg9YIOrwf8cv86c9efgsWVh9xC94Pg&s=10"
+                                alt="Choose Chocolates"
+                                class="w-48 h-48 object-cover rounded-full border-4 border-white dark:border-dark-bg shadow-lg">
+                        </div>
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Select Your Chocolates</h3>
+                        <p class="text-sm opacity-70">Choose from single-origin bars or custom truffle assortments.</p>
+                    </div>
+
+                    <div class="step-card relative z-10 flex flex-col items-center text-center scroll-reveal group"
+                        style="transition-delay: 0.2s;">
+                        <div
+                            class="step-number w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-playfair text-2xl font-bold mb-8 shadow-xl shadow-accent/20">
+                            2</div>
+                        <div class="relative mb-6">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtT0WHEtve4ZkAP60gHG5HY1CcSA54E6qMEqT17lOm5g&s=10"
+                                alt="Custom Packaging"
+                                class="w-48 h-48 object-cover rounded-full border-4 border-white dark:border-dark-bg shadow-lg">
+                        </div>
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Choose Gifting Options</h3>
+                        <p class="text-sm opacity-70">Add custom ribbons, personalized notes, and luxury cases.</p>
+                    </div>
+
+                    <div class="step-card relative z-10 flex flex-col items-center text-center scroll-reveal group"
+                        style="transition-delay: 0.4s;">
+                        <div
+                            class="step-number w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-playfair text-2xl font-bold mb-8 shadow-xl shadow-accent/20">
+                            3</div>
+                        <div class="relative mb-6">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREZ6WBkKrKsafLzdLngl-bQaCLdITUXfEpsS-5ZcTt2w&s=10"
+                                alt="Temperature Controlled Delivery"
+                                class="w-48 h-48 object-cover rounded-full border-4 border-white dark:border-dark-bg shadow-lg">
+                        </div>
+                        <h3 class="font-playfair text-2xl font-bold mb-2">Express Cold-Ship</h3>
+                        <p class="text-sm opacity-70">Shipped in insulation to preserve texture and flavor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 — SUBSCRIPTION PREVIEW -->
+        <section class="py-24 px-6 md:px-12 bg-secondary dark:bg-dark-bg">
+            <div class="container mx-auto">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Chocolate on <span
+                            class="text-accent italic">Repeat</span></h2>
+                    <p class="max-w-2xl mx-auto opacity-70">Join our chocolate journal club and unlock curated tasting boxes.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="subscription-card p-4 flex flex-col animate-card-rise bg-secondary dark:bg-dark-surface rounded-xl border border-border-light dark:border-dark-border"
+                        style="animation-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=800&q=80"
+                            alt="Truffle & Bar Club" class="w-full h-56 object-cover rounded-xl mb-6 shadow-inner">
+                        <div class="px-4 pb-4 flex flex-col grow">
+                            <span class="text-xs font-bold uppercase tracking-widest text-accent-gold mb-2">MOST
+                                POPULAR</span>
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Truffle & Bar Club</h3>
+                            <p class="text-sm opacity-70 mb-6">A curated monthly selection of two single-origin chocolate bars and six truffles.</p>
+                            <div class="mt-auto">
+                                <span class="text-3xl font-bold text-accent">$28</span> <span
+                                    class="text-sm opacity-50">/ month</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="subscription-card p-4 flex flex-col animate-card-rise bg-secondary dark:bg-dark-surface rounded-xl border border-border-light dark:border-dark-border"
+                        style="animation-delay: 0.2s;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvVZgNP_VTeGBJfSI_3ofqgSCq3IGb5NfInfuOeyzOkQ&s=10"
+                            alt="Grand Connoisseur" class="w-full h-56 object-cover rounded-xl mb-6 shadow-inner">
+                        <div class="px-4 pb-4 flex flex-col grow">
+                            <span class="text-xs font-bold uppercase tracking-widest text-accent-gold mb-2">CURATED
+                                BOX</span>
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Grand Connoisseur</h3>
+                            <p class="text-sm opacity-70 mb-6">A rotating discovery box of single-origin beans, cocoa nibs, and seasonal bonbons.</p>
+                            <div class="mt-auto">
+                                <span class="text-3xl font-bold text-accent">$45</span> <span
+                                    class="text-sm opacity-50">/ month</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="subscription-card p-4 flex flex-col animate-card-rise bg-secondary dark:bg-dark-surface rounded-xl border border-border-light dark:border-dark-border md:col-span-2 lg:col-span-1 md:mx-auto md:max-w-md lg:max-w-none"
+                        style="animation-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=800&q=80"
+                            alt="The Luxury Assortment" class="w-full h-56 object-cover rounded-xl mb-6 shadow-inner">
+                        <div class="px-4 pb-4 flex flex-col grow">
+                            <span
+                                class="text-xs font-bold uppercase tracking-widest text-accent-gold mb-2">GENEROUS</span>
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Luxury Assortment</h3>
+                            <p class="text-sm opacity-70 mb-6">Perfect for businesses or gourmands. Includes custom collections, hampers, and tasting sets.</p>
+                            <div class="mt-auto">
+                                <span class="text-3xl font-bold text-accent">$72</span> <span
+                                    class="text-sm opacity-50">/ month</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 — BAKERY STATS -->
+        <section class="py-24 px-6 md:px-12 bg-[#FFF9F4] dark:bg-dark-surface/10 relative overflow-hidden">
+            <div class="linen-texture absolute inset-0 opacity-20"></div>
+            <div class="container mx-auto relative z-10">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                    <div class="scroll-reveal">
+                        <div class="text-5xl md:text-6xl font-playfair font-bold text-accent mb-2"><span
+                                class="count-up" data-target="1200">0</span>+</div>
+                        <p class="font-playfair text-xl font-bold">Chocolates Crafted Weekly</p>
+                        <p class="text-xs uppercase tracking-tighter opacity-50 mt-2 font-mono italic">— Handcrafted —</p>
+                    </div>
+                    <div class="scroll-reveal" style="transition-delay: 0.1s;">
+                        <div class="text-5xl md:text-6xl font-playfair font-bold text-accent mb-2"><span
+                                class="count-up" data-target="12">0</span></div>
+                        <p class="font-playfair text-xl font-bold">Single-Origin Estates</p>
+                        <p class="text-xs uppercase tracking-tighter opacity-50 mt-2 font-mono italic">— Fine Cacao —</p>
+                    </div>
+                    <div class="scroll-reveal" style="transition-delay: 0.2s;">
+                        <div class="text-5xl md:text-6xl font-playfair font-bold text-accent mb-2"><span
+                                class="count-up" data-target="500">0</span>+</div>
+                        <p class="font-playfair text-xl font-bold">Active Club Members</p>
+                        <p class="text-xs uppercase tracking-tighter opacity-50 mt-2 font-mono italic">— Growing Community —</p>
+                    </div>
+                    <div class="scroll-reveal" style="transition-delay: 0.3s;">
+                        <div class="text-5xl md:text-6xl font-playfair font-bold text-accent mb-2"><span
+                                class="count-up" data-target="100">0</span>%</div>
+                        <p class="font-playfair text-xl font-bold">Pure Cocoa Butter</p>
+                        <p class="text-xs uppercase tracking-tighter opacity-50 mt-2 font-mono italic">— Zero Additives —</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 — TESTIMONIALS + PRE-ORDER CTA -->
+        <section class="relative bg-secondary dark:bg-dark-bg">
+            <!-- Testimonials Half -->
+            <div class="py-24 px-6 md:px-12">
+                <div class="container mx-auto text-center">
+                    <div class="mb-12 scroll-reveal">
+                        <h2 class="font-playfair text-4xl font-bold mb-4">Voices of <span
+                                class="text-accent italic">Our Connoisseurs</span></h2>
+                    </div>
+                    <div id="testimonial-container" class="max-w-4xl mx-auto relative h-[300px] overflow-hidden">
+                        <div
+                            class="testimonial-slide active absolute inset-0 flex flex-col items-center justify-center opacity-0 scale-95 transition-all duration-700">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+                                alt="Sophie" class="w-16 h-16 rounded-full grayscale mb-6">
+                            <div class="flex gap-1 mb-4 text-accent-gold">★★★★★</div>
+                            <blockquote class="text-2xl md:text-3xl font-playfair italic mb-6">"That first bite... it is sublime. You can taste the rich, nuanced notes of single-origin cocoa in the Madagascar Dark Chocolate bar. It is a true sensory ritual."</blockquote>
+                            <cite class="not-italic font-bold text-lg">— Sophie Laurent</cite>
+                        </div>
+                        <div
+                            class="testimonial-slide absolute inset-0 flex flex-col items-center justify-center opacity-0 scale-95 transition-all duration-700">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                                alt="Marcus" class="w-16 h-16 rounded-full grayscale mb-6">
+                            <div class="flex gap-1 mb-4 text-accent-gold">★★★★★</div>
+                            <blockquote class="text-2xl md:text-3xl font-playfair italic mb-6">"The Truffle Box is a masterpiece. The presentation was gorgeous, and the chocolates are incredibly smooth and decadent. A perfect corporate gift."</blockquote>
+                            <cite class="not-italic font-bold text-lg">— Marcus Chen</cite>
+                        </div>
+                        <div
+                            class="testimonial-slide absolute inset-0 flex flex-col items-center justify-center opacity-0 scale-95 transition-all duration-700">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Amara"
+                                class="w-16 h-16 rounded-full grayscale mb-6">
+                            <div class="flex gap-1 mb-4 text-accent-gold">★★★★★</div>
+                            <blockquote class="text-2xl md:text-3xl font-playfair italic mb-6">"Their Ecuador Reserve Collection has a depth of flavor that is truly world-class. Simply the most authentic single-origin chocolate I've tasted."</blockquote>
+                            <cite class="not-italic font-bold text-lg">— Amara Okafor</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark CTA Split -->
+            <div class="bg-accent py-20 px-6 md:px-12 relative">
+                <div class="absolute inset-0 bg-primary/20"></div>
+                <!-- Diagonal Divider -->
+                <div class="absolute -top-12 left-0 w-full h-24 bg-accent origin-bottom-left rotate-[-2deg] z-0"></div>
+                <div class="container mx-auto text-center relative z-10 scroll-reveal">
+                    <h2 class="font-playfair text-4xl md:text-6xl text-white font-bold mb-6">Our handcrafted collections sell out fast.</h2>
+                    <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Don't leave your gifting to chance. Indulge in exceptional chocolate or send a luxury gift today.</p>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-8 px-6 md:px-12 text-[#D4B896]">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- About -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="text-accent">
+                        <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
+                        <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                        <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                        <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    </svg>
+                    <span class="font-playfair text-2xl font-bold text-accent">Velour</span>
+                </div>
+                <p class="text-sm leading-relaxed opacity-70">Crafted from origin, savored with emotion. We are a premium chocolatier dedicated to showcasing single-origin estates through hand-tempered artisan creations.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.74h-2.94v-3.411h2.94v-2.518c0-2.91 1.777-4.496 4.375-4.496 1.244 0 2.315.093 2.627.135v3.044h-1.802c-1.411 0-1.685.67-1.685 1.654v2.181h3.371l-.439 3.411h-2.932v8.74h6.14c.731 0 1.325-.593 1.325-1.324v-21.351c0-.732-.594-1.325-1.325-1.325z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="X (Twitter)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Today's Selection</h4>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li><a href="index.html" class="hover:text-accent transition-colors italic">Home</a></li>
+                    <li><a href="home-2.html" class="hover:text-accent transition-colors italic">Home 2</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors italic">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-accent transition-colors italic">Services</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors italic">Blog</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors italic">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors italic">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li><a href="service.html" class="hover:text-accent transition-colors">Corporate Gifting</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors">Chocolate Journal</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Our Story</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Contact</h4>
+                <ul class="flex flex-col gap-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <span>📍</span>
+                        <span>42 Rue Bonaparte, Saint-Germain<br>Paris, FR 75006</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>✉️</span>
+                        <span>hello@veloura-chocolates.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📞</span>
+                        <span>+33 1 45 48 55 25</span>
+                    </li>
+                </ul>
+                <a href="contact.html"
+                    class="btn-primary mt-6 inline-block w-full text-center text-sm py-3 text-white hover:text-white">Book a Tasting</a>
+            </div>
+        </div>
+        <div
+            class="border-t border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
+            <p>&copy; <span id="year"></span> Veloura Chocolates. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

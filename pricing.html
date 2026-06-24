@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Tasting Experience Plans & Pricing | Veloura Chocolates</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description"
+        content="Choose your monthly chocolate subscription or bespoke gifting collections. Veloura Chocolates — Crafted from origin, savored with emotion.">
+
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A2C1D',
+                        secondary: '#FFF9F4',
+                        accent: '#A86A3D',
+                        'accent-gold': '#D4A373',
+                        'dark-bg': '#17120E',
+                        'dark-surface': '#2A211B',
+                    },
+                    fontFamily: {
+                        playfair: ['Cormorant Garamond', 'serif'],
+                        dm: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance { text-wrap: balance; }
+        }
+        
+        .pricing-tier:hover .check-icon {
+            transform: scale(1.2) rotate(12deg);
+            color: #A86A3D;
+        }
+
+        .check-icon {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-secondary text-primary transition-colors duration-300">
+    <div class="linen-texture fixed inset-0 z-[-1] opacity-10"></div>
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-dark-border h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
+        <div class="container mx-auto flex items-center justify-between w-full">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="text-accent">
+                    <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
+                    <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                </svg>
+                <span class="font-playfair text-2xl font-bold">Velour</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex items-center gap-6">
+                <a href="index.html" class="nav-link-underline font-medium hover:text-accent transition-colors">Home</a>
+                <a href="home-2.html" class="nav-link-underline font-medium hover:text-accent transition-colors">Home
+                    2</a>
+                <a href="about.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">About</a>
+                <a href="service.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Service</a>
+                <a href="blog.html" class="nav-link-underline font-medium hover:text-accent transition-colors">Blog</a>
+                <a href="pricing.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Pricing</a>
+                <a href="contact.html"
+                    class="nav-link-underline font-medium hover:text-accent transition-colors">Contact</a>
+                </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 md:gap-4">
+                <button id="theme-toggle"
+                    class="hidden xl:flex p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors theme-toggle"
+                    aria-label="Toggle Theme">
+                    <svg id="theme-moon" class="w-6 h-6 hidden dark:block text-accent-gold" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-sun" class="w-6 h-6 block dark:hidden text-accent-gold" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button id="rtl-toggle"
+                    class="hidden xl:flex p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors font-bold text-sm rtl-toggle"
+                    aria-label="Toggle RTL">RTL</button>
+
+                <div class="hidden xl:flex items-center gap-3">
+                    <a href="login.html" class="btn-secondary py-2 px-4 text-sm">Sign In</a>
+                </div>
+
+                <!-- Hamburger -->
+                <button id="hamburger-btn"
+                    class="xl:hidden p-2 flex items-center justify-center w-[40px] h-[40px] relative transition-colors"
+                    aria-label="Menu" aria-expanded="false">
+                    <span class="navbar-toggler-icon pointer-events-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-overlay" class="sidebar-overlay bg-black/60 backdrop-blur-sm"></div>
+    <aside id="sidebar-nav" class="sidebar-nav flex flex-col pt-6 px-6" role="dialog" aria-modal="true"
+        aria-label="Navigation Menu">
+        <div class="flex items-center justify-between mb-8">
+            <span class="font-playfair text-xl font-bold">Menu</span>
+            <div class="flex items-center gap-2">
+                <button
+                    class="p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors theme-toggle"
+                    aria-label="Toggle Theme">
+                    <svg class="w-6 h-6 hidden dark:block text-accent-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg class="w-6 h-6 block dark:hidden text-accent-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button
+                    class="p-2 bg-transparent hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors font-bold text-xs rtl-toggle"
+                    aria-label="Toggle RTL">RTL</button>
+                <button id="sidebar-close" class="p-2 hover:bg-black/5 rounded-full dark:text-white"
+                    aria-label="Close Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-4 text-lg font-medium">
+            <a href="index.html" class="py-3 border-b border-border-light dark:border-dark-border">Home</a>
+            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-dark-border">Home 2</a>
+            <a href="about.html" class="py-3 border-b border-border-light dark:border-dark-border">About</a>
+            <a href="service.html" class="py-3 border-b border-border-light dark:border-dark-border">Service</a>
+            <a href="blog.html" class="py-3 border-b border-border-light dark:border-dark-border">Blog</a>
+            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-dark-border text-accent">Pricing</a>
+            <a href="contact.html" class="py-3 border-b border-border-light dark:border-dark-border">Contact</a>
+            <div class="mt-6 flex flex-col gap-4">
+                <a href="login.html" class="btn-secondary text-center">Sign In</a>
+            </div>
+        </nav>
+        <div class="mt-auto pb-8 flex justify-center gap-6 opacity-60">
+            <!-- Simple Social Placeholders -->
+            <span class="w-6 h-6">FB</span>
+            <span class="w-6 h-6">IG</span>
+            <span class="w-6 h-6">TW</span>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <!-- Pricing Hero -->
+        <section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi4jQMQquoZ8Bc-ObKOFLoSNXND_FmU0CO9WQfintytg&s=10" alt="Pricing Hero"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/65 to-primary/90"></div>
+            </div>
+            <div class="relative z-10 text-center px-6 animate-heroReveal">
+                <p class="text-accent-gold font-bold uppercase tracking-[0.4em] text-sm mb-4">Veloura Chocolates</p>
+                <h1 class="font-playfair text-6xl md:text-8xl font-bold text-white mb-6 italic leading-tight">Choose
+                    Your
+                    <span class="text-accent">Tasting Journey</span>
+                </h1>
+                <p class="text-white/70 max-w-xl mx-auto text-lg italic leading-relaxed">Artisan pricing for pure cacao passion. Choose a subscription that fits your chocolate rituals.</p>
+
+            </div>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-secondary dark:from-dark-bg to-transparent">
+            </div>
+        </section>
+
+        <!-- Section 2: Subscription Plans -->
+        <section class="py-24 px-6 md:px-12 bg-[#FFF9F4] dark:bg-dark-surface/10 relative">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Starter Plan -->
+                    <div
+                        class="pricing-tier subscription-card p-8 flex flex-col bg-secondary dark:bg-dark-surface rounded-2xl border border-border-light dark:border-dark-border scroll-reveal">
+                        <div class="mb-8">
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Origin Explorer</h3>
+                            <p class="text-sm opacity-60">Perfect for dark chocolate purists.</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-5xl font-bold text-accent">$24</span> <span class="text-lg opacity-40">/
+                                month</span>
+                        </div>
+                        <ul class="flex flex-col gap-4 mb-10 grow">
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> 3 Single-Origin Craft Bars / Month</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Tasting Guide & Origin Cards</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Temperature-Controlled Shipping</li>
+                            <li class="flex items-center gap-3 text-sm opacity-40"><i class="fas fa-times"></i> Priority Release Truffles</li>
+                        </ul>
+                        <a href="register.html" class="btn-secondary text-center w-full">Join the Explorer Plan</a>
+                    </div>
+
+                    <!-- Artisan Plan -->
+                    <div class="pricing-tier subscription-card p-8 flex flex-col bg-secondary dark:bg-dark-surface rounded-2xl border-2 border-accent shadow-2xl relative scroll-reveal"
+                        style="transition-delay: 0.1s;">
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest">
+                            MOST LOVED</div>
+                        <div class="mb-8">
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Truffle Connoisseur</h3>
+                            <p class="text-sm opacity-60">Our signature handcrafted chocolate experience.</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-5xl font-bold text-accent">$48</span> <span class="text-lg opacity-40">/
+                                month</span>
+                        </div>
+                        <ul class="flex flex-col gap-4 mb-10 grow">
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> 16 Hand-Tempered Truffles / Month</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> 2 Single-Origin Craft Bars / Month</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Monthly Seasonal Flavor Pre-releases</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Priority Order Booking & Delivery</li>
+                        </ul>
+                        <a href="register.html" class="btn-primary text-center w-full text-white hover:text-white">Join
+                            the Connoisseur Plan</a>
+                    </div>
+
+                    <!-- Master Baker Plan -->
+                    <div class="pricing-tier subscription-card p-8 flex flex-col bg-secondary dark:bg-dark-surface rounded-2xl border border-border-light dark:border-dark-border scroll-reveal md:col-span-2 lg:col-span-1 md:mx-auto md:max-w-md lg:max-w-none"
+                        style="transition-delay: 0.2s;">
+                        <div class="mb-8">
+                            <h3 class="font-playfair text-3xl font-bold mb-2">Grand Cacao Master</h3>
+                            <p class="text-sm opacity-60">The ultimate luxury chocolate ritual.</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-5xl font-bold text-accent">$95</span> <span class="text-lg opacity-40">/
+                                month</span>
+                        </div>
+                        <ul class="flex flex-col gap-4 mb-10 grow">
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> 24 Truffles + 4 Craft Bars / Month</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Curated Wine Pairing Guide</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Direct-Trade Partner Estate Updates</li>
+                            <li class="flex items-center gap-3 text-sm"><i
+                                    class="fas fa-check check-icon text-accent"></i> Annual Private Tasting Event Ticket</li>
+                        </ul>
+                        <a href="register.html" class="btn-secondary text-center w-full">Join the Master Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Bespoke Bundles -->
+        <section class="py-24 px-6 md:px-12 bg-secondary dark:bg-dark-bg relative overflow-hidden">
+            <div class="absolute -right-24 top-0 w-96 h-96 bg-accent opacity-5 blur-[120px] rounded-full"></div>
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2 scroll-reveal">
+                        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">Bespoke <span
+                                class="text-accent italic">Gift Collections</span></h2>
+                        <p class="text-lg opacity-70 mb-10 leading-relaxed">Planning an event, corporate gifting campaign, or wedding celebration? Our bespoke collections allow you to customize luxury chocolate boxes with custom flavors and branding.</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                            <div
+                                class="p-6 bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-border-light dark:border-dark-border hover:shadow-lg transition-shadow duration-300">
+                                <h4 class="font-playfair text-xl font-bold mb-2">The Velvet Hamper</h4>
+                                <p class="text-xs opacity-50 mb-3 uppercase tracking-tighter">Bars, Truffles & Caramels</p>
+                                <span class="text-2xl font-bold text-accent">$120</span>
+                            </div>
+                            <div
+                                class="p-6 bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-border-light dark:border-dark-border hover:shadow-lg transition-shadow duration-300">
+                                <h4 class="font-playfair text-xl font-bold mb-2">Grand Tasting Flight</h4>
+                                <p class="text-xs opacity-50 mb-3 uppercase tracking-tighter">Single-Origin Kit for 10</p>
+                                <span class="text-2xl font-bold text-accent">$145</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-secondary inline-block">Request A Custom Bundle</a>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative scroll-reveal" style="transition-delay: 0.2s;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-qqdVmxRm1KgzirPBvs46q3pVEFIJHvSL21_1SFn5A&s=10" alt="Bundles"
+                            class="rounded-2xl shadow-2xl w-full h-[500px] object-cover animate-breadRise">
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-accent text-white p-6 rounded-xl shadow-xl max-w-[200px] entrance-anim">
+                            <p class="font-playfair text-lg italic leading-tight">“The perfect curation for any celebration.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Perks & Values -->
+        <section class="py-24 px-6 md:px-12 bg-primary dark:bg-dark-bg text-secondary">
+            <div class="container mx-auto">
+                <div class="text-center mb-20 scroll-reveal">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Value Beyond the <span
+                            class="text-accent italic">Cocoa</span></h2>
+                    <p class="max-w-2xl mx-auto opacity-70">Joining Veloura Chocolates means more than just receiving luxury sweets. It’s an investment in ethics and pure sensory craft.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div class="flex flex-col items-center text-center scroll-reveal group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-500">
+                            <i
+                                class="fas fa-truck text-accent group-hover:text-white text-2xl transition-colors duration-500"></i>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold mb-2">Carbon-Neutral Shipping</h4>
+                        <p class="text-sm opacity-60">All subscription plans include eco-friendly, temperature-regulated delivery.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center scroll-reveal group"
+                        style="transition-delay: 0.1s;">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-500">
+                            <i
+                                class="fas fa-leaf text-accent group-hover:text-white text-2xl transition-colors duration-500"></i>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold mb-2">Direct-Trade Ethics</h4>
+                        <p class="text-sm opacity-60">We source directly from ancestral growers at over 50% above fair-trade standard rates.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center scroll-reveal group"
+                        style="transition-delay: 0.2s;">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-500">
+                            <i
+                                class="fas fa-calendar-alt text-accent group-hover:text-white text-2xl transition-colors duration-500"></i>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold mb-2">Pause Anytime</h4>
+                        <p class="text-sm opacity-60">Traveling or taking a break? Easily pause or skip a delivery cycle in your dashboard.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center scroll-reveal group"
+                        style="transition-delay: 0.3s;">
+                        <div
+                            class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-500">
+                            <i
+                                class="fas fa-users text-accent group-hover:text-white text-2xl transition-colors duration-500"></i>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold mb-2">Sensory Events</h4>
+                        <p class="text-sm opacity-60">Exclusive invites to our monthly chocolate pairing sessions and masterclasses.</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-24 text-center scroll-reveal">
+                    <p class="text-lg italic opacity-60 mb-8">Ready to taste the origin difference?</p>
+                    <a href="register.html" class="btn-primary px-12 py-5 text-lg text-white hover:text-white">Create
+                        Your Account</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-8 px-6 md:px-12 text-[#D4B896]">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- About -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="text-accent">
+                        <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
+                        <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                        <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                        <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    </svg>
+                    <span class="font-playfair text-2xl font-bold text-accent">Velour</span>
+                </div>
+                <p class="text-sm leading-relaxed opacity-70">Crafted from origin, savored with emotion. We are a premium chocolatier dedicated to showcasing single-origin estates through hand-tempered artisan creations.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.74h-2.94v-3.411h2.94v-2.518c0-2.91 1.777-4.496 4.375-4.496 1.244 0 2.315.093 2.627.135v3.044h-1.802c-1.411 0-1.685.67-1.685 1.654v2.181h3.371l-.439 3.411h-2.932v8.74h6.14c.731 0 1.325-.593 1.325-1.324v-21.351c0-.732-.594-1.325-1.325-1.325z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        aria-label="X (Twitter)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Today's Selection</h4>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li><a href="index.html" class="hover:text-accent transition-colors italic">Home</a></li>
+                    <li><a href="home-2.html" class="hover:text-accent transition-colors italic">Home 2</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors italic">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-accent transition-colors italic">Services</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors italic">Blog</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors italic">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors italic">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li><a href="service.html" class="hover:text-accent transition-colors">Corporate Gifting</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors">Chocolate Journal</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Our Story</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-playfair text-xl font-bold text-white mb-6">Contact</h4>
+                <ul class="flex flex-col gap-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <span>📍</span>
+                        <span>42 Rue Bonaparte, Saint-Germain<br>Paris, FR 75006</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>✉️</span>
+                        <span>hello@veloura-chocolates.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📞</span>
+                        <span>+33 1 45 48 55 25</span>
+                    </li>
+                </ul>
+                <a href="contact.html"
+                    class="btn-primary mt-6 inline-block w-full text-center text-sm py-3 text-white hover:text-white">Book a Tasting</a>
+            </div>
+        </div>
+        <div
+            class="border-t border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
+            <p>&copy; <span id="year"></span> Veloura Chocolates. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
