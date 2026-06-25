@@ -38,7 +38,7 @@
     <!-- Header -->
     <!-- Header -->
     <header
-        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-dark-border h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
+        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-transparent h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
         <div class="container mx-auto flex items-center justify-between w-full">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2">
@@ -141,13 +141,13 @@
             </div>
         </div>
         <nav class="flex flex-col gap-4 text-lg font-medium">
-            <a href="index.html" class="py-3 border-b border-border-light dark:border-dark-border">Home</a>
-            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-dark-border">Home 2</a>
-            <a href="about.html" class="py-3 border-b border-border-light dark:border-dark-border">About</a>
-            <a href="service.html" class="py-3 border-b border-border-light dark:border-dark-border">Service</a>
-            <a href="blog.html" class="py-3 border-b border-border-light dark:border-dark-border">Blog</a>
-            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-dark-border">Pricing</a>
-            <a href="contact.html" class="py-3 border-b border-border-light dark:border-dark-border text-accent">Contact</a>
+            <a href="index.html" class="py-3 border-b border-border-light dark:border-transparent">Home</a>
+            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-transparent">Home 2</a>
+            <a href="about.html" class="py-3 border-b border-border-light dark:border-transparent">About</a>
+            <a href="service.html" class="py-3 border-b border-border-light dark:border-transparent">Service</a>
+            <a href="blog.html" class="py-3 border-b border-border-light dark:border-transparent">Blog</a>
+            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-transparent">Pricing</a>
+            <a href="contact.html" class="py-3 border-b border-border-light dark:border-transparent text-accent">Contact</a>
             <div class="mt-6 flex flex-col gap-4">
                 <a href="login.html" class="btn-secondary text-center">Sign In</a>
             </div>
@@ -171,13 +171,10 @@
             <div class="relative z-10 text-center px-6 animate-heroReveal">
                 <p class="text-accent-gold font-bold uppercase tracking-[0.4em] text-sm mb-4">Veloura Chocolates</p>
                 <h1 class="font-playfair text-6xl md:text-8xl font-bold text-white mb-6 italic leading-tight">Say
-                    <span class="text-accent">Hello</span>
+                Hello
                 </h1>
                 <p class="text-white/70 max-w-xl mx-auto text-lg italic leading-relaxed">From single-origin beans to hand-tempered truffles, we love discussing our craft. Drop us a line.</p>
 
-            </div>
-            <div
-                class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-secondary dark:from-dark-bg to-transparent">
             </div>
         </section>
 
@@ -186,7 +183,7 @@
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div
-                        class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border-2 border-accent/10">
+                        class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border border-border-light dark:border-white/10">
                         <div
                             class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6 shadow-inner">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none"
@@ -196,9 +193,9 @@
                             </svg>
                         </div>
                         <h4 class="font-playfair text-2xl font-bold mb-4 italic">Phone the Atelier</h4>
-                        <p class="text-sm font-bold opacity-60 tracking-wider">+33 1 45 48 55 25</p>
+                        <p class="text-sm font-bold opacity-60 tracking-wider whitespace-nowrap">+33 1 45 48 55 25</p>
                     </div>
-                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border-2 border-accent/10"
+                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border border-border-light dark:border-white/10"
                         style="transition-delay: 0.1s;">
                         <div
                             class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6 shadow-inner">
@@ -211,7 +208,7 @@
                         <h4 class="font-playfair text-2xl font-bold mb-4 italic">Email the Boutique</h4>
                         <p class="text-sm font-bold opacity-60 tracking-wider">hello@veloura-chocolates.com</p>
                     </div>
-                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border-2 border-accent/10"
+                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal border border-border-light dark:border-white/10"
                         style="transition-delay: 0.2s;">
                         <div
                             class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6 shadow-inner">
@@ -249,28 +246,35 @@
                             <div class="flex flex-col gap-2">
                                 <label class="text-xs font-bold uppercase tracking-widest opacity-40 italic">Full Name</label>
                                 <input type="text" placeholder="Jean Valjean"
-                                    class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-dark-border rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm tracking-wide">
+                                    class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-transparent rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm tracking-wide">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label class="text-xs font-bold uppercase tracking-widest opacity-40 italic">Email Address</label>
                                 <input type="email" placeholder="jean@veloura.com"
-                                    class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-dark-border rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm tracking-wide">
+                                    class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-transparent rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm tracking-wide">
                             </div>
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-xs font-bold uppercase tracking-widest opacity-40 italic">Subject</label>
-                            <select
-                                class="p-4 bg-secondary dark:bg-dark-bg border border-border-light dark:border-dark-border rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm">
-                                <option>Wholesale Partnerships</option>
-                                <option>Bespoke Gift collections</option>
-                                <option>Tasting Event Reservation</option>
-                                <option>General Inquiry</option>
-                            </select>
+                            <div class="relative">
+                                <select
+                                    class="w-full appearance-none p-4 pr-12 bg-secondary dark:bg-dark-bg border border-border-light dark:border-transparent rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm cursor-pointer">
+                                    <option>Wholesale Partnerships</option>
+                                    <option>Bespoke Gift collections</option>
+                                    <option>Tasting Event Reservation</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-primary dark:text-white opacity-40">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-xs font-bold uppercase tracking-widest opacity-40 italic">Your Message</label>
                             <textarea placeholder="Tell us how we can elevate your chocolate journey..." rows="5"
-                                class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-dark-border rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm leading-relaxed"></textarea>
+                                class="bg-secondary dark:bg-dark-bg p-4 border border-border-light dark:border-transparent rounded-xl outline-none focus:ring-2 focus:ring-accent font-dm text-sm leading-relaxed"></textarea>
                         </div>
                         <button type="submit"
                             class="btn-primary py-5 text-xl font-bold shadow-2xl text-white hover:text-white transition-all active:scale-95">Send Message →</button>
@@ -278,7 +282,7 @@
                             <span class="text-xs font-bold uppercase tracking-widest opacity-40 italic">Follow Us</span>
                             <div class="flex items-center gap-4">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-dark-border rounded-full hover:border-accent hover:text-accent transition-all"
+                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-transparent rounded-full hover:border-accent hover:text-accent transition-all"
                                     aria-label="Facebook">
                                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -286,7 +290,7 @@
                                     </svg>
                                 </a>
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-dark-border rounded-full hover:border-accent hover:text-accent transition-all"
+                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-transparent rounded-full hover:border-accent hover:text-accent transition-all"
                                     aria-label="Instagram">
                                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -294,7 +298,7 @@
                                     </svg>
                                 </a>
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-dark-border rounded-full hover:border-accent hover:text-accent transition-all"
+                                    class="w-10 h-10 flex items-center justify-center border border-border-light dark:border-transparent rounded-full hover:border-accent hover:text-accent transition-all"
                                     aria-label="X (Twitter)">
                                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -312,37 +316,39 @@
         <section class="py-24 px-6 md:px-12 bg-secondary dark:bg-dark-bg">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-                    <div class="p-10 border-border-light dark:border-dark-border md:border-r scroll-reveal">
+                    <div class="flex flex-col h-full p-10 border-accent/20 dark:border-white/20 md:border-e scroll-reveal">
                         <h4
                             class="font-playfair text-2xl font-bold mb-4 italic underline underline-offset-8 decoration-accent/30">
                             Wholesale</h4>
                         <p class="text-sm opacity-60 mb-6 italic leading-relaxed">Want to serve our single-origin bars or truffles in your luxury shop or cafe? We provide tailored partner packages.</p>
                         <a href="mailto:wholesale@veloura-chocolates.com"
-                            class="text-accent font-bold uppercase tracking-widest text-[10px] hover:opacity-75 transition-opacity">wholesale@veloura-chocolates.com
+                            class="mt-auto text-accent font-bold uppercase tracking-widest text-[10px] hover:opacity-75 transition-opacity">wholesale@veloura-chocolates.com
                             →</a>
                     </div>
-                    <div class="p-10 border-border-light dark:border-dark-border md:border-r scroll-reveal"
+                    <div class="flex flex-col h-full p-10 border-accent/20 dark:border-white/20 md:border-e scroll-reveal"
                         style="transition-delay: 0.1s;">
                         <h4
                             class="font-playfair text-2xl font-bold mb-4 italic underline underline-offset-8 decoration-accent/30">
                             Tastings</h4>
                         <p class="text-sm opacity-60 mb-6 italic leading-relaxed">Join our master chocolatier for guided origin tasting experiences exploring notes of various micro-estates.</p>
                         <a href="pricing.html"
-                            class="text-accent font-bold uppercase tracking-widest text-[10px] hover:opacity-75 transition-opacity">Book Tasting Session →</a>
+                            class="mt-auto text-accent font-bold uppercase tracking-widest text-[10px] hover:opacity-75 transition-opacity">Book Tasting Session →</a>
                     </div>
-                    <div class="p-10 scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="flex flex-col h-full p-10 scroll-reveal" style="transition-delay: 0.2s;">
                         <h4
                             class="font-playfair text-2xl font-bold mb-4 italic underline underline-offset-8 decoration-accent/30">
                             Gifting</h4>
                         <p class="text-sm opacity-60 mb-6 italic leading-relaxed">Curate custom luxury chocolate boxes and hampers for corporate gifting or private events.</p>
-                        </div>
+                        <a href="contact.html"
+                            class="mt-auto text-accent font-bold uppercase tracking-widest text-[10px] hover:opacity-75 transition-opacity">Inquire About Gifting →</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Geographic Presence (Map Section) -->
         <section
-            class="relative h-[500px] w-full overflow-hidden bg-secondary dark:bg-dark-bg border-y border-border-light dark:border-dark-border">
+            class="relative h-[500px] w-full overflow-hidden bg-secondary dark:bg-dark-bg border-y border-border-light dark:border-transparent">
             <div class="absolute inset-0 z-0">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.3311893!3d48.8583489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e288e285d8d%3A0x67347a2491a6d96e!2s42%20Rue%20Bonaparte%2C%2075006%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1711786542000!5m2!1sen!2sus"
@@ -351,29 +357,12 @@
                 </iframe>
             </div>
 
-            <!-- Map Overlay Card -->
-            <div class="container mx-auto px-6 h-full relative z-10 pointer-events-none flex items-center justify-end">
-                <div
-                    class="bread-card p-10 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-xl shadow-2xl border-2 border-accent/20 max-w-sm pointer-events-auto scroll-reveal">
-                    <p class="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4">Visit the Boutique</p>
-                    <h3 class="font-playfair text-4xl font-bold italic mb-6 leading-tight">42 Rue <br> Bonaparte</h3>
-                    <p class="text-sm opacity-70 mb-8 italic leading-relaxed font-dm">Located in Saint-Germain-des-Prés, our flag-ship boutique is a haven for chocolate connoisseurs.</p>
-                    <div class="flex flex-col gap-4">
-                        <div class="flex flex-col gap-1">
-                            <span class="text-xs font-bold uppercase tracking-widest opacity-40">Opening Hours</span>
-                            <p class="text-sm font-bold">Wed — Sun: 10:00 AM — 7:00 PM</p>
-                        </div>
-                        <a href="https://maps.app.goo.gl/M4rQyv4Xv2D1PZcR8" target="_blank"
-                            class="text-accent font-bold uppercase tracking-widest text-[10px] underline underline-offset-8 hover:text-primary transition-colors">Open
-                            in Google Maps</a>
-                    </div>
-                </div>
-            </div>
+            
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary pt-20 pb-8 px-6 md:px-12 text-[#D4B896]">
+    <footer class="bg-secondary dark:bg-dark-bg pt-20 pb-8 px-6 md:px-12 text-primary dark:text-[#D4B896]">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <!-- About -->
             <div class="flex flex-col gap-6">
@@ -390,7 +379,7 @@
                 <p class="text-sm leading-relaxed opacity-70">Crafted from origin, savored with emotion. We are a premium chocolatier dedicated to showcasing single-origin estates through hand-tempered artisan creations.</p>
                 <div class="flex gap-4">
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="Facebook">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -398,7 +387,7 @@
                         </svg>
                     </a>
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="Instagram">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -406,7 +395,7 @@
                         </svg>
                     </a>
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="X (Twitter)">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -418,21 +407,21 @@
 
             <!-- Menu -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Today's Selection</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Today's Selection</h4>
                 <ul class="flex flex-col gap-3 text-sm">
-                    <li><a href="index.html" class="hover:text-accent transition-colors italic">Home</a></li>
-                    <li><a href="home-2.html" class="hover:text-accent transition-colors italic">Home 2</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition-colors italic">About Us</a></li>
-                    <li><a href="service.html" class="hover:text-accent transition-colors italic">Services</a></li>
-                    <li><a href="blog.html" class="hover:text-accent transition-colors italic">Blog</a></li>
-                    <li><a href="pricing.html" class="hover:text-accent transition-colors italic">Pricing</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition-colors italic">Contact</a></li>
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="home-2.html" class="hover:text-accent transition-colors">Home 2</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors">Blog</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
                 </ul>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Quick Links</h4>
                 <ul class="flex flex-col gap-3 text-sm">
                     <li><a href="service.html" class="hover:text-accent transition-colors">Corporate Gifting</a></li>
                     <li><a href="blog.html" class="hover:text-accent transition-colors">Chocolate Journal</a></li>
@@ -443,7 +432,7 @@
 
             <!-- Contact -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Contact</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Contact</h4>
                 <ul class="flex flex-col gap-4 text-sm">
                     <li class="flex items-start gap-3">
                         <span>📍</span>
@@ -463,7 +452,7 @@
             </div>
         </div>
         <div
-            class="border-t border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
+            class="border-t border-primary/10 dark:border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
             <p>&copy; <span id="year"></span> Veloura Chocolates. All rights reserved.</p>
             <div class="flex gap-6">
                 <a href="#">Privacy Policy</a>
@@ -477,3 +466,4 @@
 </body>
 
 </html>
+

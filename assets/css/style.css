@@ -16,7 +16,7 @@
 html,
 body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
@@ -59,12 +59,11 @@ header.scrolled {
     background-color: rgba(253, 248, 240, 0.9) !important;
     backdrop-filter: blur(16px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-    height: 60px !important;
 }
 
 [data-theme="dark"] header.scrolled {
     background-color: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: none;
 }
 
 header a[href="index.html"] svg,
@@ -350,6 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 .step-card:hover .step-number {
     transform: scale(1.2) translateY(-5px);
     background-color: var(--primary);
+    color: var(--secondary);
 }
 
 /* Animation Utility Classes */
@@ -445,12 +445,28 @@ h1, h2, h3, h4, h5, h6 {
     inset-inline-end: 0;
     width: min(280px, 85vw);
     transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 0.35s;
     z-index: 9999;
     background-color: var(--secondary);
     box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 100vh;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.sidebar-nav a {
+    border-bottom: none !important;
+}
+
+/* Hide social placeholders in sidebar */
+.sidebar-nav .mt-auto.pb-8.flex.justify-center {
+    display: none !important;
 }
 
 .testimonial-slide.active {
@@ -460,6 +476,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar-nav.open {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 0s;
 }
 
 [dir="rtl"] .sidebar-nav {
@@ -558,20 +576,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: width 0.3s ease;
 }
 
-.nav-link-underline:hover::after {
+.nav-link-underline:hover::after,
+.nav-link-underline.active::after {
     width: 100%;
 }
 
-/* RTL Inversion for Slide Reveals */
-[dir="rtl"] .sidebar-nav {
-    inset-inline-end: auto;
-    inset-inline-start: 0;
-    transform: translateX(-100%);
+.nav-link-underline.active {
+    color: var(--accent) !important;
 }
 
-[dir="rtl"] .sidebar-nav.open {
-    transform: translateX(0);
+.sidebar-nav a.active {
+    color: var(--accent) !important;
+    font-weight: 700;
 }
+
 /* --- SCROLL TO TOP --- */
 .scroll-to-top {
     position: fixed;
@@ -602,6 +620,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .scroll-to-top:hover {
     background-color: var(--primary);
+    color: var(--secondary);
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(44, 24, 16, 0.4);
 }

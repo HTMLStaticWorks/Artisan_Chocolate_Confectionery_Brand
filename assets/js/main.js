@@ -10,7 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonialCarousel();
     initComingSoonTimer();
     initScrollTop();
+    initActiveNav();
 });
+
+function initActiveNav() {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath || currentPath === '') currentPath = 'index.html';
+    
+    const navLinks = document.querySelectorAll('header nav a, .sidebar-nav a:not(.btn-secondary)');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            link.classList.add('active');
+        } else {
+            // Ensure no hardcoded text-accent remains on non-active pages
+            if(link.classList.contains('text-accent')) {
+                 link.classList.remove('text-accent');
+            }
+        }
+    });
+}
 
 // --- SCROLL TO TOP ---
 function initScrollTop() {

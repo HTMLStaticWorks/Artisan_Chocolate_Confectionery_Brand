@@ -37,17 +37,21 @@
 <body class="bg-secondary text-primary transition-colors">
     <!-- Header -->
     <header
-        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-dark-border h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
+        class="sticky top-0 z-[100] bg-secondary/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-border-light dark:border-transparent h-[64px] md:h-[72px] flex items-center px-4 md:px-8">
         <div class="container mx-auto flex items-center justify-between w-full">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="text-accent">
-                    <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
-                    <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
-                    <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
-                    <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                    <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)"
+                        stroke="currentColor" stroke-width="1" />
+                    <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none"
+                        opacity="0.6" />
+                    <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none"
+                        opacity="0.6" />
+                    <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6" />
                 </svg>
                 <span class="font-playfair text-2xl font-bold">Velour</span>
             </a>
@@ -66,7 +70,7 @@
                     class="nav-link-underline font-medium hover:text-accent transition-colors">Pricing</a>
                 <a href="contact.html"
                     class="nav-link-underline font-medium hover:text-accent transition-colors">Contact</a>
-                </nav>
+            </nav>
 
             <!-- Actions -->
             <div class="flex items-center gap-3 md:gap-4">
@@ -140,13 +144,13 @@
             </div>
         </div>
         <nav class="flex flex-col gap-4 text-lg font-medium">
-            <a href="index.html" class="py-3 border-b border-border-light dark:border-dark-border">Home</a>
-            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-dark-border">Home 2</a>
-            <a href="about.html" class="py-3 border-b border-border-light dark:border-dark-border text-accent">About</a>
-            <a href="service.html" class="py-3 border-b border-border-light dark:border-dark-border">Service</a>
-            <a href="blog.html" class="py-3 border-b border-border-light dark:border-dark-border">Blog</a>
-            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-dark-border">Pricing</a>
-            <a href="contact.html" class="py-3 border-b border-border-light dark:border-dark-border">Contact</a>
+            <a href="index.html" class="py-3 border-b border-border-light dark:border-transparent">Home</a>
+            <a href="home-2.html" class="py-3 border-b border-border-light dark:border-transparent">Home 2</a>
+            <a href="about.html" class="py-3 border-b border-border-light dark:border-transparent text-accent">About</a>
+            <a href="service.html" class="py-3 border-b border-border-light dark:border-transparent">Service</a>
+            <a href="blog.html" class="py-3 border-b border-border-light dark:border-transparent">Blog</a>
+            <a href="pricing.html" class="py-3 border-b border-border-light dark:border-transparent">Pricing</a>
+            <a href="contact.html" class="py-3 border-b border-border-light dark:border-transparent">Contact</a>
             <div class="mt-6 flex flex-col gap-4">
                 <a href="login.html" class="btn-secondary text-center">Sign In</a>
             </div>
@@ -163,20 +167,17 @@
         <!-- About Hero -->
         <section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkBr-8mq7Z74744mwesPFlYFt15iyDMw1jAo6nOxFiw&s=10" alt="About Hero"
-                    class="w-full h-full object-cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkBr-8mq7Z74744mwesPFlYFt15iyDMw1jAo6nOxFiw&s=10"
+                    alt="About Hero" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/65 to-primary/90"></div>
             </div>
             <div class="relative z-10 text-center px-6 animate-heroReveal">
                 <p class="text-accent-gold font-bold uppercase tracking-[0.4em] text-sm mb-4">Veloura Chocolates</p>
-                <h1 class="font-playfair text-6xl md:text-8xl font-bold text-white mb-6 italic leading-tight">Our
-                    <span class="text-accent">Story</span>
+                <h1 class="font-playfair text-6xl md:text-8xl font-bold text-white mb-6 italic leading-tight">Our Story
                 </h1>
-                <p class="text-white/70 max-w-xl mx-auto text-lg italic leading-relaxed">Born of fine cacao, precise tempering, and the art of tasting.</p>
+                <p class="text-white/70 max-w-xl mx-auto text-lg italic leading-relaxed">Born of fine cacao, precise
+                    tempering, and the art of tasting.</p>
 
-            </div>
-            <div
-                class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-secondary dark:from-dark-bg to-transparent">
             </div>
         </section>
 
@@ -184,18 +185,20 @@
         <section class="py-24 px-6 md:px-12 bg-secondary dark:bg-dark-bg">
             <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative scroll-reveal">
-                    <img src="https://img.freepik.com/premium-photo/smiling-woman-white-sweater-portrait_653449-26211.jpg?semt=ais_incoming&w=740&q=80"
-                        alt="Elise Moreau"
-                        class="rounded-2xl shadow-2xl w-full h-[600px] object-cover border-8 border-white dark:border-dark-surface animate-breadRise">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Elise Moreau"
+                        class="rounded-2xl shadow-2xl w-full h-[350px] md:h-[600px] object-cover border-8 border-white dark:border-dark-surface animate-breadRise">
 
                 </div>
                 <div class="animate-heroReveal">
                     <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-8">Crafting a <br> <span
                             class="text-accent italic">Symphony of Cacao</span></h1>
-                    <p class="text-lg opacity-80 mb-6 font-medium leading-relaxed">I began Veloura Chocolates in 2018 with
+                    <p class="text-lg opacity-80 mb-6 font-medium leading-relaxed">I began Veloura Chocolates in 2018
+                        with
                         nothing but single-origin cacao, organic cane sugar, and a passion for pure flavors.</p>
                     <p class="text-lg opacity-70 mb-8 leading-relaxed">Before starting this brand, I spent years
-                        studying cacao genetics and conching techniques in the micro-estates of Madagascar and Ecuador. My goal was simple: to bring the honest, emotional power of raw cacao back to the forefront of confectionery.</p>
+                        studying cacao genetics and conching techniques in the micro-estates of Madagascar and Ecuador.
+                        My goal was simple: to bring the honest, emotional power of raw cacao back to the forefront of
+                        confectionery.</p>
                     <div class="flex gap-4">
                         <a href="contact.html" class="btn-secondary">Contact Us</a>
                     </div>
@@ -209,66 +212,72 @@
             <div class="container mx-auto">
                 <div class="text-center mb-20 scroll-reveal">
                     <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">The Chocolate Journey</h2>
-                    <p class="max-w-2xl mx-auto opacity-70 italic text-balance">Every single bar takes 36 hours of slow conching and tempering. Every second is earned through patience and care.</p>
+                    <p class="max-w-2xl mx-auto opacity-70 italic text-balance">Every single bar takes 36 hours of slow
+                        conching and tempering. Every second is earned through patience and care.</p>
                 </div>
 
                 <div class="max-w-5xl mx-auto flex flex-col gap-24">
                     <!-- Step 1 -->
                     <div class="flex flex-col md:flex-row items-center gap-12 scroll-reveal">
-                        <div class="md:w-1/2 relative">
+                        <div class="w-full md:w-1/2 relative">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHH9uteC_JvMf0sEAOipjNIxzdpAaz3pPH_c7bpD9ZdA&s=10"
                                 alt="Harvesting"
                                 class="w-full h-80 object-cover rounded-2xl shadow-lg border-2 border-accent/20">
                             <span
-                                class="absolute -top-6 -left-6 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-2xl font-bold shadow-xl">1</span>
+                                class="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-xl md:text-2xl font-bold shadow-xl">1</span>
                         </div>
                         <div class="md:w-1/2 md:pl-12">
                             <h3 class="font-playfair text-3xl font-bold mb-4">Harvesting the Pods</h3>
-                            <p class="opacity-70 leading-relaxed">We source direct-trade organic cacao beans from sustainable estates globally, preserving biodiversity.</p>
+                            <p class="opacity-70 leading-relaxed">We source direct-trade organic cacao beans from
+                                sustainable estates globally, preserving biodiversity.</p>
                         </div>
                     </div>
                     <!-- Step 2 -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-12 scroll-reveal"
                         style="transition-delay: 0.1s;">
-                        <div class="md:w-1/2 relative">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxwjzn1jMwDLCv4B5nNeLlr8DPwzDuj9MAhS0Xo161Q&s=10" alt="Conching"
+                        <div class="w-full md:w-1/2 relative">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxwjzn1jMwDLCv4B5nNeLlr8DPwzDuj9MAhS0Xo161Q&s=10"
+                                alt="Conching"
                                 class="w-full h-80 object-cover rounded-2xl shadow-lg border-2 border-accent/20">
                             <span
-                                class="absolute -top-6 -right-6 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-2xl font-bold shadow-xl">2</span>
+                                class="absolute -top-3 -right-3 md:-top-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-xl md:text-2xl font-bold shadow-xl">2</span>
                         </div>
                         <div class="md:w-1/2 md:pr-12">
                             <h3 class="font-playfair text-3xl font-bold mb-4">Precision Conching</h3>
-                            <p class="opacity-70 leading-relaxed">We conch our chocolate for 36 hours to aerate, develop complex fruit aromas, and eliminate harsh acidities.</p>
+                            <p class="opacity-70 leading-relaxed">We conch our chocolate for 36 hours to aerate, develop
+                                complex fruit aromas, and eliminate harsh acidities.</p>
                         </div>
                     </div>
                     <!-- Step 3 -->
                     <div class="flex flex-col md:flex-row items-center gap-12 scroll-reveal"
                         style="transition-delay: 0.2s;">
-                        <div class="md:w-1/2 relative">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCT_MayBDFt5QnjKCpiM-bIJLH0aQRRgTb1vz5_jzz0w&s=10"
+                        <div class="w-full md:w-1/2 relative">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80"
                                 alt="Tempering"
                                 class="w-full h-80 object-cover rounded-2xl shadow-lg border-2 border-accent/20">
                             <span
-                                class="absolute -top-6 -left-6 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-2xl font-bold shadow-xl">3</span>
+                                class="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-xl md:text-2xl font-bold shadow-xl">3</span>
                         </div>
                         <div class="md:w-1/2 md:pl-12">
                             <h3 class="font-playfair text-3xl font-bold mb-4">Artisan Tempering</h3>
-                            <p class="opacity-70 leading-relaxed">Small batches are tempered on cold marble slabs, aligning crystal structures for the perfect shine and snap.</p>
+                            <p class="opacity-70 leading-relaxed">Small batches are tempered on cold marble slabs,
+                                aligning crystal structures for the perfect shine and snap.</p>
                         </div>
                     </div>
                     <!-- Step 4 -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-12 scroll-reveal"
                         style="transition-delay: 0.3s;">
-                        <div class="md:w-1/2 relative">
+                        <div class="w-full md:w-1/2 relative">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQse6ziLV_xJErf_FjwoMxYmeOGoQlRRcLKY4SlHrINUA&s=10"
                                 alt="Gifting"
                                 class="w-full h-80 object-cover rounded-2xl shadow-lg border-2 border-accent/20">
                             <span
-                                class="absolute -top-6 -right-6 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-2xl font-bold shadow-xl">4</span>
+                                class="absolute -top-3 -right-3 md:-top-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-accent text-white rounded-full flex items-center justify-center font-playfair text-xl md:text-2xl font-bold shadow-xl">4</span>
                         </div>
                         <div class="md:w-1/2 md:pr-12">
                             <h3 class="font-playfair text-3xl font-bold mb-4">The Gifting Hand</h3>
-                            <p class="opacity-70 leading-relaxed">Each collection is packaged by hand in eco-friendly linen paper and foil, ready to be savored or shared as a premium gift.</p>
+                            <p class="opacity-70 leading-relaxed">Each collection is packaged by hand in eco-friendly
+                                linen paper and foil, ready to be savored or shared as a premium gift.</p>
                         </div>
                     </div>
                 </div>
@@ -282,8 +291,12 @@
                 <div class="scroll-reveal">
                     <h2 class="font-playfair text-5xl md:text-6xl font-bold mb-8 italic">Discover <span
                             class="text-accent offset-8">Single-Origin</span></h2>
-                    <p class="text-xl opacity-80 leading-relaxed mb-6">Cacao is the heart of Veloura. We use ethically sourced beans from single estates, each carrying unique flavor profiles shaped by local soils and climate.</p>
-                    <p class="text-lg opacity-60 leading-relaxed mb-10">Every bar and truffle—from our fruity Madagascar Sambirano to our earthy Ecuador Arriba—is crafted with pure cacao butter. No palm oil. No artificial preservatives. Just pure emotion.</p>
+                    <p class="text-xl opacity-80 leading-relaxed mb-6">Cacao is the heart of Veloura. We use ethically
+                        sourced beans from single estates, each carrying unique flavor profiles shaped by local soils
+                        and climate.</p>
+                    <p class="text-lg opacity-60 leading-relaxed mb-10">Every bar and truffle—from our fruity Madagascar
+                        Sambirano to our earthy Ecuador Arriba—is crafted with pure cacao butter. No palm oil. No
+                        artificial preservatives. Just pure emotion.</p>
                     <div class="flex items-center gap-6">
                         <div class="flex flex-col">
                             <span class="text-3xl font-bold text-accent">12+</span>
@@ -313,7 +326,8 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16 scroll-reveal">
                     <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4 italic">Our Commitments</h2>
-                    <p class="opacity-70 max-w-2xl mx-auto italic">Crafting chocolate is a responsibility to the soil, the farmers, and the consumer.</p>
+                    <p class="opacity-70 max-w-2xl mx-auto italic">Crafting chocolate is a responsibility to the soil,
+                        the farmers, and the consumer.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal">
@@ -321,22 +335,26 @@
                             alt="Direct-Trade"
                             class="w-64 h-64 object-cover rounded-full mb-8 border-4 border-accent/20">
                         <h3 class="font-playfair text-2xl font-bold mb-4 italic">Direct-Trade</h3>
-                        <p class="text-sm opacity-60">We bypass middle agents, paying premium prices directly to cacao farming families to support sustainable livelihoods.</p>
+                        <p class="text-sm opacity-60">We bypass middle agents, paying premium prices directly to cacao
+                            farming families to support sustainable livelihoods.</p>
                     </div>
                     <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal"
                         style="transition-delay: 0.1s;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFmy5hdSwAQaNSn_-T4VJIpM6inAFfQpKu_YQaE1Lkzw&s=10"
-                            alt="Eco-Packaging" class="w-64 h-64 object-cover rounded-full mb-8 border-4 border-accent/20">
+                            alt="Eco-Packaging"
+                            class="w-64 h-64 object-cover rounded-full mb-8 border-4 border-accent/20">
                         <h3 class="font-playfair text-2xl font-bold mb-4 italic">Eco-Packaging</h3>
-                        <p class="text-sm opacity-60">All packaging is 100% compostable or recyclable, printed with organic soy inks to minimize our ecological footprint.</p>
+                        <p class="text-sm opacity-60">All packaging is 100% compostable or recyclable, printed with
+                            organic soy inks to minimize our ecological footprint.</p>
                     </div>
-                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal md:col-span-2 lg:col-span-1 md:mx-auto md:max-w-md lg:max-w-none"
+                    <div class="bread-card p-10 flex flex-col items-center text-center scroll-reveal md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-0 md:max-w-md lg:max-w-none"
                         style="transition-delay: 0.2s;">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfyvH54gKBb5Nk6ROoTdU6LBT80aM0qyDF_Sm4A71vA&s=10"
                             alt="Tasting Experiences"
                             class="w-64 h-64 object-cover rounded-full mb-8 border-4 border-accent/20">
                         <h3 class="font-playfair text-2xl font-bold mb-4 italic">Tasting Experiences</h3>
-                        <p class="text-sm opacity-60">We conduct educational tastings to share the rich history, genetics, and cultural legacy of cacao fermentation.</p>
+                        <p class="text-sm opacity-60">We conduct educational tastings to share the rich history,
+                            genetics, and cultural legacy of cacao fermentation.</p>
                     </div>
                 </div>
             </div>
@@ -344,24 +362,30 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary pt-20 pb-8 px-6 md:px-12 text-[#D4B896]">
+    <footer class="bg-secondary dark:bg-dark-bg pt-20 pb-8 px-6 md:px-12 text-primary dark:text-[#D4B896]">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <!-- About -->
             <div class="flex flex-col gap-6">
                 <div class="flex items-center gap-2">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="text-accent">
-                        <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)" stroke="currentColor" stroke-width="1"/>
-                        <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
-                        <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
-                        <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+                        <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="var(--accent-gold)"
+                            stroke="currentColor" stroke-width="1" />
+                        <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none"
+                            opacity="0.6" />
+                        <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="currentColor" stroke-width="0.8" fill="none"
+                            opacity="0.6" />
+                        <path d="M 16 8 L 16 26" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6" />
                     </svg>
                     <span class="font-playfair text-2xl font-bold text-accent">Velour</span>
                 </div>
-                <p class="text-sm leading-relaxed opacity-70">Crafted from origin, savored with emotion. We are a premium chocolatier dedicated to showcasing single-origin estates through hand-tempered artisan creations.</p>
+                <p class="text-sm leading-relaxed opacity-70">Crafted from origin, savored with emotion. We are a
+                    premium chocolatier dedicated to showcasing single-origin estates through hand-tempered artisan
+                    creations.</p>
                 <div class="flex gap-4">
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="Facebook">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -369,7 +393,7 @@
                         </svg>
                     </a>
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="Instagram">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -377,7 +401,7 @@
                         </svg>
                     </a>
                     <a href="#"
-                        class="w-10 h-10 flex items-center justify-center border border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
+                        class="w-10 h-10 flex items-center justify-center border border-primary/30 dark:border-[#D4B896]/30 rounded-full hover:border-accent hover:text-accent transition-all hover:scale-110"
                         aria-label="X (Twitter)">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -389,21 +413,21 @@
 
             <!-- Menu -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Today's Selection</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Today's Selection</h4>
                 <ul class="flex flex-col gap-3 text-sm">
-                    <li><a href="index.html" class="hover:text-accent transition-colors italic">Home</a></li>
-                    <li><a href="home-2.html" class="hover:text-accent transition-colors italic">Home 2</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition-colors italic">About Us</a></li>
-                    <li><a href="service.html" class="hover:text-accent transition-colors italic">Services</a></li>
-                    <li><a href="blog.html" class="hover:text-accent transition-colors italic">Blog</a></li>
-                    <li><a href="pricing.html" class="hover:text-accent transition-colors italic">Pricing</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition-colors italic">Contact</a></li>
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="home-2.html" class="hover:text-accent transition-colors">Home 2</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+                    <li><a href="service.html" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="blog.html" class="hover:text-accent transition-colors">Blog</a></li>
+                    <li><a href="pricing.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
                 </ul>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Quick Links</h4>
                 <ul class="flex flex-col gap-3 text-sm">
                     <li><a href="service.html" class="hover:text-accent transition-colors">Corporate Gifting</a></li>
                     <li><a href="blog.html" class="hover:text-accent transition-colors">Chocolate Journal</a></li>
@@ -414,7 +438,7 @@
 
             <!-- Contact -->
             <div>
-                <h4 class="font-playfair text-xl font-bold text-white mb-6">Contact</h4>
+                <h4 class="font-playfair text-xl font-bold text-primary dark:text-white mb-6">Contact</h4>
                 <ul class="flex flex-col gap-4 text-sm">
                     <li class="flex items-start gap-3">
                         <span>📍</span>
@@ -430,11 +454,12 @@
                     </li>
                 </ul>
                 <a href="contact.html"
-                    class="btn-primary mt-6 inline-block w-full text-center text-sm py-3 text-white hover:text-white">Book a Tasting</a>
+                    class="btn-primary mt-6 inline-block w-full text-center text-sm py-3 text-white hover:text-white">Book
+                    a Tasting</a>
             </div>
         </div>
         <div
-            class="border-t border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
+            class="border-t border-primary/10 dark:border-[#D4B896]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
             <p>&copy; <span id="year"></span> Veloura Chocolates. All rights reserved.</p>
             <div class="flex gap-6">
                 <a href="#">Privacy Policy</a>
