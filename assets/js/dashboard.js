@@ -1,4 +1,4 @@
-/* 🧑💻 The Baker's Atelier — Dashboard Dynamic Logic */
+/* 🧑💻 The Chocolatier's Atelier — Dashboard Dynamic Logic */
 
 document.addEventListener('DOMContentLoaded', () => {
     initAtelierNav();

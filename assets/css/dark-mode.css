@@ -34,7 +34,7 @@
     background-color: var(--bg-color) !important;
 }
 
-[data-theme="dark"] .bread-card {
+[data-theme="dark"] .premium-card {
     background-color: #231B16;
     border-color: #382B23;
 }
@@ -58,4 +58,9 @@
     background-color: #F7F3EE;
     color: #17120E;
 }
+
+[data-theme="dark"] a.bg-accent-gold {
+    color: #4A2C1D !important;
+}
+
 
