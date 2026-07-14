@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
-    <!-- Elegant Monogram V -->
-    <path d="M 4 4 C 7 12 11 22 15 28 C 15.5 29 16.5 29 17 28 C 21 22 25 12 28 4" stroke="#A86A3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Cocoa Bean nested inside the V -->
-    <path d="M 16 8 C 12.5 13 12.5 21 16 26 C 19.5 21 19.5 13 16 8 Z" fill="#D4A373" stroke="#A86A3D" stroke-width="1"/>
-    <!-- Cocoa Bean internal lines (ridges) -->
-    <path d="M 16 8 C 14.5 13 14.5 21 16 26" stroke="#4A2C1D" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <path d="M 16 8 C 17.5 13 17.5 21 16 26" stroke="#4A2C1D" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <path d="M 16 8 L 16 26" stroke="#4A2C1D" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <path d="M16 2 L30 16 L16 30 L2 16 Z" stroke="#A86A3D" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M16 8 C11 10 11 22 16 24 C21 22 21 10 16 8 Z" fill="#D4A373"/>
+    <path d="M16 2 L16 30" stroke="#A86A3D" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.5"/>
 </svg>
